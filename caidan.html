@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="caidan.css"  type="text/css"/>
+	</head>
+	<body>
+		<div class="wai" id="wai">
+		<div>
+			<p>Web前端</p>
+			<ul style="display: none;">
+				<li>JavaScript</li>
+				<li>DIV+CSS</li>
+				<li>jQuery</li>
+			</ul>
+		</div>
+		<div>
+			<p>后台脚本</p>
+			<ul style="display: none;">
+				<li>PHP</li>
+				<li>ASP.net</li>
+				<li>JSP</li>
+			</ul>
+		</div>
+		<div>
+			<p>前端框架</p>
+			<ul style="display: none;">
+				<li>Extjs</li>
+				<li>Esspress</li>
+				<li>YUI</li>
+			</ul>
+		</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	window.onload=function(){
+		var wai=document.getElementById('wai');
+		var pp=wai.getElementsByTagName('p');
+		var ull=wai.getElementsByTagName('ul');
+		for(var i=0;i<pp.length;i++){
+			pp[i].id=i;
+			pp[i].onclick=function(){
+				var u=ull[this.id]
+				if(u.style.display=='block'){
+					u.style.display='none'
+				}else{
+					u.style.display='block'
+				}
+			}
+		}
+	}
+</script>
